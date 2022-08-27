@@ -1,0 +1,71 @@
+
+
+<!--    top nav-->
+<div th:fragment="admin-top-nav-bar-replace" xmlns:sec="http://www.w3.org/1999/xhtml">
+  <div class="d-top-nav-bar">
+    <div class="navbar_container">
+
+      <a class="main-logo_" href="#">AK<span>Virtual Clinic</span></a>
+
+      <img id="mobile-cta-menu" class="mobile-menu-btn" src="/imgs/menu.png" alt="open navigation">
+
+
+      <div class="nav_right_">
+        <img id="mobile-exit" class="mobile-menu-exit" src="/imgs/cancel.png" alt="cancel navigation">
+
+
+        <ul class="user_name_ul">
+          <li class="doc_img li_main">
+            <img src="/imgs/user_profile.png" alt="profile_image"
+                 style="width: 30px" id="mobile-cta-">
+          </li>
+          <li class="doc_name"><a href="">User Name</a>
+
+            <div class="dd_menu">
+              <div class="dd_left">
+                <ul class="icons">
+                  <li><i class="fa-solid fa-user-doctor"></i></li>
+                  <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+                </ul>
+              </div>
+              <div class="dd_right">
+                <ul>
+                  <li><a href="">Profile</a></li>
+                  <li><a href="">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-cta-')
+    menu = document.querySelector('.dd_menu')
+
+    mobileBtn.addEventListener('click', () => {
+      menu.classList.toggle('active')
+    })
+
+
+    const menuBtn = document.getElementById('mobile-cta-menu')
+    nav = document.querySelector('.nav_right_')
+    let mobileBtnExist = document.getElementById('mobile-exit');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.add('menu-btn')
+    })
+
+    mobileBtnExist.addEventListener('click', () => {
+      nav.classList.remove('menu-btn')
+    })
+
+  </script>
+
+</div>

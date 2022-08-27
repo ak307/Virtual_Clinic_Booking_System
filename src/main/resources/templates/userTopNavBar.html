@@ -1,0 +1,78 @@
+
+
+
+<!--    top nav-->
+<div th:fragment="replace" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <div class="top-nav-bar">
+        <div class="top-nav-container">
+            <a class="main-logo" th:href="@{/home}">AK<span>Virtual Clinic</span></a>
+
+            <img id="mobile-cta-" class="mobile-menu-btn" src="/imgs/menu.png" alt="open navigation">
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="/imgs/cancel.png" alt="cancel navigation">
+
+                <ul class="primary-nav">
+                    <li class="home-nav-btn"><a th:href="@{/home}">Home</a></li>
+                    <li class=" dropdown">
+                        <a class="dropbtn" href="#" >See A Doctor</a>
+                        <div class="dropdown-div">
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a th:href="@{/virtualAppointment}">Virtual Clinic</a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/physicalAppointment/booking}">Physical Clinic</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="our-doc-nav-btn"><a th:href="@{/ourDoctor}">Our Doctors</a></li>
+                    <li class="contact-us-nav-btn"><a th:href="@{/contactUs}">Contact Us</a></li>
+                </ul>
+
+                <ul class="secondary-nav" th:style="${userLogInAuth == null ? 'display: flex' : 'display: none'}">
+                    <li class="login-cta"><a th:href="@{/login}">Login</a></li>
+                    <li class="signup-cta"><a th:href="@{register}">Sign up</a></li>
+                </ul>
+
+
+                <ul class="username-dropdown" th:style="${userLogInAuth != null ? 'display: block' : 'display: none'}">
+                    <li class="userNameBtn" th:text="${userLogInAuth}">UserName</li>
+                    <div class="dropdown-profile">
+                        <a th:href="@{/user/profile}">Profile Setting</a>
+                        <a th:href="@{/logout}">Logout</a>
+                    </div>
+                </ul>
+
+
+
+            </nav>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--        Java script code-->
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta-')
+        nav = document.querySelector('nav')
+        mobileBtnExist = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn')
+        })
+
+        mobileBtnExist.addEventListener('click', () => {
+            nav.classList.remove('menu-btn')
+        })
+
+    </script>
+
+
+
+
+</div>

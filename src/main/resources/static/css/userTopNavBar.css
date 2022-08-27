@@ -1,0 +1,423 @@
+:root {
+    --primary-color: #007AF3;
+}
+
+*{
+    font-family: 'Poppins', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*menus*/
+.mobile-menu-btn {
+    width: 2em;
+    cursor: pointer;
+}
+
+.mobile-menu-exit{
+    width: 2em;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+}
+
+
+/*navbar*/
+.top-nav-bar {
+    background: white;
+    padding: 1em .5em 1em .5em;
+    border-bottom: 1px solid #aaa;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 10px grey;
+    z-index: 1000;
+}
+
+.main-logo {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    font-family: 'Poppins', serif;
+}
+
+
+span {
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+nav {
+    display: none;
+}
+
+.top-nav-container {
+    display: flex;
+    place-content: space-between;
+}
+
+
+
+/*nav design for mobile view*/
+/*this is used for java script function to appear nav item box*/
+nav.menu-btn {
+    display: block;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    background: slategray;
+    height: 100vh;
+    padding: 2em;
+}
+
+.primary-nav {
+    margin-top: 3.5em;
+    margin-bottom: 0;
+}
+
+.primary-nav li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+    margin-right: 0;
+    font-family: 'Poppins', serif;
+}
+
+.secondary-nav li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+    margin-right: 0;
+    font-family: 'Poppins', serif;
+}
+
+
+.primary-nav li {
+    display: inline;
+}
+
+
+.primary-nav li a:hover, .dropdown li:hover {
+    font-weight: bold;
+}
+
+.secondary-nav li a:hover {
+    font-weight: bold;
+}
+
+
+.mobile-menu-exit {
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+}
+
+.userNameBtn{
+    color: white;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Poppins', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.userNameBtn:before {
+    content: '';
+    left: -.3em;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    margin-right: 5em;
+    background-image: url("../imgs/user_profile.png");
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1120px) {
+    /*!/center the nav container*!*!*/
+    .top-nav-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .mobile-menu-btn, .mobile-menu-exit {
+        display: none;
+    }
+
+
+    .top-nav-container {
+        display: grid;
+        grid-template-columns: 300px auto;
+        justify-content: unset;
+    }
+
+
+    .top-nav-bar nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .top-nav-bar nav ul {
+        display: flex;
+    }
+
+
+    .top-nav-bar nav a {
+        color: black;
+        font-size: 1em;
+        padding: .1em 1em;
+    }
+
+
+    .top-nav-bar nav ul.primary-nav {
+        margin: 0;
+        align-items: center;
+    }
+
+    .top-nav-bar nav ul.secondary-nav {
+        margin: auto 0;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .signup-cta {
+        padding: .5em 1em;
+        border-radius: 5em;
+        font-weight: bold;
+        border: 3px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .signup-cta:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
+
+
+    /*FOR APPOINTMENT DROPDOWN*/
+    .dropdown-div {
+        display: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 200px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+    /*FOR USERNAME DROPDOWN*/
+    .userNameBtn{
+        color: black;
+        align-items: center;
+        font-size: 1em;
+        font-family: 'Poppins', serif;
+        font-weight: bold;
+    }
+
+
+    /* The container <div> - needed to position the dropdown content */
+    .username-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-profile {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 200px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-profile a {
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+
+    /*!* Change color of dropdown links on hover *!*/
+    /*.dropdown-content a:hover {*/
+    /*    background-color: #ddd;*/
+    /*}*/
+
+    /* Show the dropdown menu on hover */
+    .username-dropdown:hover .dropdown-profile {display: block;}
+
+}
+
+
+
+
+@media only screen and (min-width: 1450px) {
+    .top-nav-bar nav a {
+        padding: .1em 1.5em;
+    }
+
+    .main-logo {
+        font-size: 1.1em;
+    }
+
+
+    .top-nav-container {
+        grid-template-columns: 400px auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .dropdown-div {
+        display: none;
+    }
+
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px darkgrey;
+    min-width: 190px;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+
+ /*Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    border-radius: 5px;
+    transition: background-color 200ms ease-in-out;
+}
+
+ /*Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    background: lightgray;
+}
+
+
+.dropdown:hover .dropdown-div {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*User Profile dropdown*/
+.username-dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+/* Dropdown Content for profile pic (Hidden by Default) */
+.dropdown-profile {
+    display: none;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px #f2f2f2;
+    min-width: 170px;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+/* Links inside the dropdown */
+.dropdown-profile a {
+    color: black;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    border-radius: 5px;
+    transition: background-color 200ms ease-in-out;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-profile a:hover {background-color: #006BD6; color: white}
+
+/* Show the dropdown menu on hover */
+.username-dropdown:hover .dropdown-profile {
+    display: block;
+    background: lightgray;
+}
+
+
+
+
+
+

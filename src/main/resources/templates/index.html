@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/userTopNavBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    <title>HOME</title>
+</head>
+<body class="body-t">
+
+<div class="main-container"></div>
+
+    <div th:replace="/userTopNavBar::replace"></div>
+
+<!--    Hero-->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero_left-col">
+                <h1>Consult Doctor or Specialist</h1>
+                <div class="dropdown">
+                    <button class="make-appointment-cta">Make appointment</button>
+                    <div class="dropdown-content-">
+                        <a th:href="@{/virtualAppointment}">Virtual appointment</a>
+                        <a th:href="@{/physicalAppointment/booking}">Physical appointment</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="hero_right-col">
+                <img class="hero-img" src="https://www.healthviewx.com/wp-content/uploads/2021/12/Healthcare-e-visits-online-digital-Evaluation-Management-EM-services.png" alt="virtual-clinic-image">
+            </div>
+
+
+        </div>
+    </section>
+
+<!--    Features-->
+    <section class="features-section" >
+        <div class="hero-container">
+            <h2 class="feature-h2">Our Services</h2>
+
+            <ul class="features-list">
+                <li class="features f-v-clinic">Virtual Clinic</li>
+                <li class="features f-clinic">Clinic</li>
+                <li class="features m-transport">Medical Transport</li>
+                <li class="features covid-test">Covid 19 Test</li>
+            </ul>
+
+            <img src="/imgs/clinic_services.jpeg" alt="clinic services">
+
+        </div>
+    </section>
+
+
+<!--    our doctor Section(testimonial section)-->
+    <section class="our-doc-section">
+        <div class="our-doc-container">
+            <h2 class="doctor-h2">Our Doctors</h2>
+            <ul class="doctors-list">
+                <li>
+                    <img src="/imgs/Doc1.jpeg" alt="Person">
+                    <h2> Dr. Tan Choon Yean
+                    </h2>
+                    <blockquote>
+                        <h3>Professional profile:</h3>
+                        Dr. Tan graduated with a medical degree from University of Malaya in 2013. Since then, she has completed rotations across various clinical postings, including Internal Medicine, General Surgery, Paediatrics, Obstetrics and Gynecology, Orthopedics as well as Emergency Medicine.
+                    </blockquote>
+                </li>
+
+                <li>
+                    <img src="/imgs/Doc2.png" alt="Person">
+                    <h2> Dr.Chen Lin</h2>
+                    <blockquote>
+                            <h3>Professional profile:</h3>
+                            Dr Chen graduated with an MBBS from the National University of Singapore. He has 4 years of experience in professional practice in Singapore hospitals, in disciplines including Obstetrics and Gynaecology, Emergency Medicine, Internal Medicine and General Surgery. Dr Chen has a special interest in Women’s Health and was a post-graduate trainee in Obstetrics and Gynaecology before joining the private practice. His other clinical interests include Sexual Health, Preventive Health and Aesthetic Medicine. Language: English, Mandarin
+                        </blockquote>
+                </li>
+
+                <li>
+                    <img src="/imgs/Doc3.jpeg" alt="Person">
+                    <h2>Dr.Michael Chee</h2>
+                    <blockquote>
+                        <h3>Professional profile:</h3>
+                        Dr Chee graduated with an MBBS from the National University of Singapore. He has 6 years of experience in major public hospital disciplines including Orthopaedics, Hand & Reconstructive Microsurgery, Accident & Emergency, General Surgery, Paediatric Surgery, Internal Medicine as well as step down care at the community hospital level. His areas of interest include sports medicine and community medicine.
+                </li>
+            </ul>
+
+            <div class="doc-see_more-container">
+                <a class="see-more-btn" th:href="@{/ourDoctor}">Read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+<!--    Contact Us(add in contact us page)-->
+    <section class="contact-section">
+        <div class="contact-us-container">
+            <div class="contact-left">
+                <h2 class="contact-header">Contact</h2>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send message">
+
+                </form>
+            </div>
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1021124.9257522826!2d103.28511443904453!3d1.3139375041206929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2ssg!4v1656065074906!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <div th:replace="/footer::my-footer"></div>
+
+</body>
+</html>
+
+

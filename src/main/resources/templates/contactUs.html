@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="/css/contactUs.css">
+
+    <link rel="stylesheet" href="/css/userTopNavBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--    nav-->
+    <div th:replace="/userTopNavBar::replace"></div>
+
+
+
+<!--    hero-->
+    <section class="bgimage">
+        <div class="Hero-container">
+            <div class="hero-text">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+    </section>
+
+
+<!--Contact-->
+<!--Section: Contact v.2-->
+
+<!--    Contact Us Form(add in contact us page)-->
+<section class="contact-section">
+    <div class="contact-us-container">
+        <div class="contact-left">
+            <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
+
+            <form th:action="@{contactUs/send}" th:object="${contactForm}" method="post">
+
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">
+                        Invalid Input.
+                    </div>
+                </div>
+
+
+                <div th:if="${success}">
+                    <div th:text="${success}" class="mb-3" style="background: green; color: white"></div>
+                </div>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control"
+                           th:field="*{name}">
+                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger" style="font-size: 1em"></span>
+                </div>
+
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control"
+                           th:field="*{email}">
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger" style="font-size: 1em"></span>
+                </div>
+
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                              th:field="*{message}"
+                    ></textarea>
+                    <span th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="text-danger" style="font-size: 1em"></span>
+                </div>
+
+                <input type="submit" class="send-message-cta" value="Send message">
+
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<!--Address-->
+<section class="address-section">
+    <div class="address-container">
+        <div class="address-left-col">
+            <h2 class="address-header">Clinic Address</h2>
+            <ul class="address-list">
+                <li class="addresses address-location">3 Marine Vista #11-60 (003494)</li>
+                <li class="addresses address-phone">+65 87445321</li>
+                <li class="addresses address-email">akvirtualclinic.sg@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="address-right-col">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1021124.9257522826!2d103.28511443904453!3d1.3139375041206929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2ssg!4v1656065074906!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!--    Footer-->
+    <div th:replace="/footer::my-footer"></div>
+
+
+
+
+<!--        Java script code-->
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta-')
+        nav = document.querySelector('nav')
+        mobileBtnExist = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn')
+        })
+
+        mobileBtnExist.addEventListener('click', () => {
+            nav.classList.remove('menu-btn')
+        })
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', serif;
+}
+
+
+.contact-us-nav-btn{
+    font-weight: bold;
+}
+
+.bgimage {
+    width: 100%;
+    height: 500px;
+    background: url('http://www.safeholidaybd.com/wp-content/uploads/2017/09/contactus.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', serif;
+    font-size: 2.5em;
+}
+
+/*Contact form*/
+
+
+/*Contect*/
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-us-container {
+    padding: 2em;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+.contact-left, .contact-right {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+input, textarea{
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.send-message-cta {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 17px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+
+
+/*address*/
+.address-section {
+    background: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.address-left-col h2{
+    margin: 2em 0 1em 2em;
+    padding-top: 1em;
+    font-family: 'Poppins', serif;
+}
+
+
+.address-list {
+    margin-left: 2em;
+}
+
+
+
+.addresses {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    position: relative;
+}
+
+
+.address-location:before {
+    content: '';
+    left: -1.5em;
+    top: .2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-right: 3em;
+    background-image: url("../imgs/location (1).png");
+}
+
+
+
+.address-phone:before {
+    content: '';
+    left: -1.5em;
+    top: .2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-right: 3em;
+    background-image: url("../imgs/phone-call (1).png");
+}
+
+
+.address-email:before{
+    content: '';
+    left: -1.5em;
+    top: .2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-right: 3em;
+    background-image: url("../imgs/email (1).png");
+}
+
+
+@media only screen and (min-width: 1080px) {
+    .contact-us-container {
+        padding: 2em;
+        width: 50%;
+    }
+
+
+    .address-container {
+        margin-left: 2.5em;
+        padding-left: .1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    }
+
+
+    .address-left-col {
+        margin-top: 2em;
+    }
+
+    .address-right-col {
+
+    }
+
+
+
+
+}
+

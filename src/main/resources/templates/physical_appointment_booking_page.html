@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Physical Appointment Booking</title>
+    <link rel="stylesheet" href="/css/userTopNavBar.css">
+    <link rel="stylesheet" href="/css/virtualAppointmentBookingPage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+    <div th:replace="/userTopNavBar::replace"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 border p-5 shadow bg-light mt-5">
+                <div class="col-12">
+                    <h3 class="fw-normal text-secondary fs-4 text-uppercase mb-4">Physical Appointment form</h3>
+                </div>
+                <form th:action="@{/physicalAppointment/saveAppointment}" th:object="${appointment_form}" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" id="username" class="form-control" placeholder="Full Name" required
+                                   th:field="*{fullName}">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required
+                                   th:field="*{phoneNumber}">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Enter Email" required id="email"
+                                   th:field="*{email}">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="date" class="form-control" placeholder="Enter Date" id="date" name="date"
+                                   th:field="*{date}"  onchange="this.form.submit()" >
+                        </div>
+
+                        <div class="col-12">
+                            <select class="form-select" id="time" name="time">
+                                <option selected>Select time</option>
+                                <option th:each="availableSlot : ${availableSlots}"
+                                        th:value="${availableSlot}" th:text="${availableSlot}"></option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Description(Optional)" th:field="*{description}" id="desc"></textarea>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <button type="submit" class="btn btn-primary float-end">Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script th:inline="javascript">
+        document.getElementById("date").addEventListener("input", function(){
+            document.getElementById("desc").value = "-";
+        });
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+/*!*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');*!*/
+
+:root {
+    --primary-color: #007AF3;
+}
+
+
+* {
+    font-family: 'Poppins', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    color: #444444;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Poppins', serif;
+}
+
+
+section {
+    padding: 5em 0;
+}
+
+.doc-see_more-container{
+    text-align: center;
+}
+
+.see-more-btn {
+    background: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: .3em 2em .3em 2em;
+}
+
+
+
+/*Topnav*/
+.home-nav-btn {
+    font-weight: bold;
+}
+
+
+/*Hero*/
+.hero {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-container {
+    margin-top: 2em;
+}
+
+
+h1 {
+    font-size: 2em;
+    line-height: 1.3em;
+    margin-top: .2em;
+}
+
+.subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+    letter-spacing: 0.3em;
+}
+
+
+.make-appointment-cta {
+    display: inline-block;
+    background: #006BD6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: .6em 2em;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+
+
+
+
+/*.make-appointment-cta:hover {*/
+/*    cursor: pointer;*/
+/*    background-color: var(--primary-color);*/
+/*    color: white;*/
+/*}*/
+
+.hero-right-col {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 70%;
+    margin-top: 3em;
+}
+
+
+/* Dropdown Button */
+/*.dropbtn {*/
+/*    background-color: #006BD6;*/
+/*    color: white;*/
+/*    padding: 16px;*/
+/*    font-size: 16px;*/
+/*    border: none;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+/*Features*/
+.features-section{
+    background: #f2f2f2;
+    color: black;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+
+.feature-h2 {
+    font-family: 'Poppins', serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 0 0 0.7em 1em;
+
+}
+
+ul.features-list{
+    margin-left: 2.5em;
+    padding-left: .1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+
+.features {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    position: relative;
+}
+
+.f-v-clinic:before {
+    content: '';
+    left: -2em;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    margin-right: 5em;
+    background-image: url("../imgs/virtual_img_icon.svg");
+}
+
+
+.f-clinic:before {
+    content: '';
+    position: absolute;
+    left: -2em;
+    width: 30px;
+    height: 30px;
+    background-image: url("../imgs/clinic_icon.svg");
+    background-size: contain;
+    margin-right: .5em;
+}
+
+
+.m-transport:before {
+    content: '';
+    position: absolute;
+    left: -2em;
+    width: 30px;
+    height: 30px;
+    background-image: url("../imgs/medical_transport_icon.png");
+    background-size: contain;
+    margin-right: .5em;
+}
+
+
+.covid-test:before {
+    content: '';
+    position: absolute;
+    left: -2em;
+    width: 30px;
+    height: 30px;
+    background-image: url("../imgs/coronavirus_test_icon.png");
+    background-size: contain;
+    margin-right: .5em;
+}
+
+.features-section img {
+    display: none;
+}
+
+
+
+/*Our doctor section*/
+.our-doc-section{
+    background: var(--primary-color);
+    color: white;
+
+    background: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+ul.doctors-list{
+    margin-left: 2.5em;
+    padding-left: .1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
+.doctor-h2 {
+    margin-left: 1.5em;
+    font-family: 'Poppins', serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 3em;
+    margin-top: 0;
+    color: black;
+}
+
+.our-doc-container li {
+    background: grey;
+    text-align: left;
+    padding: 2em 1em;
+    width: 80%;
+    margin: 0 auto 7em auto;
+    border-radius: 1em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.our-doc-container li img {
+    width: 10em;
+    height: 10em;
+    border: 5px solid;
+    border-radius: 50%;
+    margin-top: -8em;
+    margin-left: 30%;
+}
+
+.our-doc-container li h2 {
+    margin-left: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.8em;
+    font-family: 'Poppins', serif;
+}
+
+
+.our-doc-container li h3 {
+    margin: 1em 0 0 0;
+    font-size: 1.5em;
+    font-family: 'Poppins', serif;
+}
+
+
+.doc-see_more-container {
+    align-items: center;
+}
+
+.see-more-btn {
+    font-size: 1.5em;
+    font-family: 'Poppins', serif;
+}
+
+.see-more-btn:hover{
+    cursor: pointer;
+    color: white;
+    background: #007AF3;
+}
+
+
+/*Contect*/
+.contact-header {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contact-left, .contact-right {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+input, textarea{
+    width: 100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.send-message-cta {
+    background: white;
+    color: black;
+    border: 3px solid var(--primary-color);
+    border-radius: 5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+
+}
+
+.send-message-cta:hover {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+/*Add desktop view*/
+@media only screen and (min-width: 1150px) {
+    h1 {
+        font-size: 4.5em;
+    }
+
+    section {
+        padding: 5em 4em;
+    }
+
+    .contact-section {
+        width: 50%;
+    }
+
+    .hero .hero-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .hero-img {
+        width: 40vw;
+        margin: 2em;
+        border-radius: 2em;
+    }
+
+    .hero_left-col {
+        margin: auto;
+        width: 60%;
+        padding: 2em;
+    }
+
+    .hero-left-col h1 {
+        margin-bottom: 1em;
+        font-family: 'Poppins', serif;
+        font-size: 4em;
+    }
+
+
+
+    /*Features*/
+
+    .features {
+        font-size: 1.6em;
+        margin-bottom: 2em;
+        margin-left: 2em;
+        position: relative;
+    }
+
+    .f-v-clinic:before {
+        content: '';
+        left: -2em;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        margin-right: 5em;
+        background-image: url("../imgs/virtual_img_icon.svg");
+    }
+
+
+    .f-clinic:before {
+        content: '';
+        position: absolute;
+        left: -2em;
+        width: 30px;
+        height: 30px;
+        background-image: url("../imgs/clinic_icon.svg");
+        background-size: contain;
+        margin-right: .5em;
+    }
+
+
+    .m-transport:before {
+        content: '';
+        position: absolute;
+        left: -2em;
+        width: 30px;
+        height: 30px;
+        background-image: url("../imgs/medical_transport_icon.png");
+        background-size: contain;
+        margin-right: .5em;
+    }
+
+
+    .covid-test:before {
+        content: '';
+        position: absolute;
+        left: -2em;
+        width: 30px;
+        height: 30px;
+        background-image: url("../imgs/coronavirus_test_icon.png");
+        background-size: contain;
+        margin-right: .5em;
+    }
+
+
+    /*contact us*/
+
+    .contact-section {
+        width: 100%;
+    }
+
+    .contact-us-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-left {
+        width: 50%;
+    }
+
+    .contact-right {
+        width: 50%;
+        margin: auto;
+    }
+
+
+}
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content- {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content- a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content- a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content- {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/*.dropdown:hover {background-color: }*/
+
+

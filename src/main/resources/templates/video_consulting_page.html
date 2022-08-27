@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>NextRTC Example Webapp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/video_consulting.css">
+
+</head>
+<body>
+<div id="container" class="">
+
+    <h2>Video Consulting</h2>
+
+    <div class="jumbotron">
+        <div class="video_col">
+
+            <div>
+                <video id="template" width="720" height="440" autoplay controls></video>
+            </div>
+        </div>
+
+        <div class="rightCol">
+        </div>
+
+    </div>
+
+    <div class="leave_btn_container">
+        <a  th:href="@{/videoConsult/payment}" class="leave_btn">Leave</a>
+    </div>
+
+
+</div>
+
+
+
+
+
+<script src="bundle.js"></script>
+</body>
+</html>

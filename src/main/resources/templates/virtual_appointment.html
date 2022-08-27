@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/virtualAppointment.css">
+    <link rel="stylesheet" href="/css/userTopNavBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Virtual Appointment</title>
+</head>
+<body>
+
+    <div th:replace="/userTopNavBar::replace"></div>
+
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-left-col">
+                <h1>SEE A DOCTOR VIRTUALLY AND GET MEDICATION DELIVERED TO YOU</h1>
+                <a th:href="@{/virtualAppointment/booking}">Make appointment</a>
+            </div>
+
+            <div class="hero-right-col">
+                <img src="/imgs/seeing_online_doctor.png" alt="consulting with doctor online">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="how-to-section">
+        <div class="how-to-section-container">
+            <h2>How to make Virtual Appointment</h2>
+            <div class="how-to-section-cols-container">
+                <div class="how-to-left-col">
+<!--                    <img src="/imgs/how-to-find-virtual-doc.jpeg" alt="virtual doctor image">-->
+                </div>
+
+
+                <div class="how-to-right-col">
+                    <ul>
+                        <li>
+                            <h3>Step 1</h3>
+                            <p>You need to check suitable healthcare conditions in the section below.
+                                If your condition is included, you can proceed to book a virtual appointment.</p>
+                        </li>
+
+                        <li>
+                            <h3>Step 2</h3>
+                            <p>Click 'Make Appointment' button on the session above.</p>
+                        </li>
+
+
+                        <li>
+                            <h3>Step 3</h3>
+                            <p>Fill your information in appointment form.</p>
+                        </li>
+
+                        <li>
+                            <h3>Step 4</h3>
+                            <p>Click the 'Book Appointment button. You will receive an email along with the video chat link that will be activated during your appointment time.</p>
+                        </li>
+
+                        <li>
+                            <h3>Step 5</h3>
+                            <p>Open the link during your appointment time. The doctor will be waiting for you. Enjoy...</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="suitable-condition-section">
+        <h3 class="s-c-header">Suitable Conditions</h3>
+        <div class="suitable-condition-container">
+            <div class="suitable-con-left">
+                <p>Many common illnesses and chronic conditions can be effectively
+                    treated through a video consultation. Below are some typical
+                    conditions that can be treated on Doctor Anywhere:</p>
+
+                <div class="suitable-condition-list-items-container">
+                    <ul class="left-list-item">
+                        <li class="ls-h3">
+                            <h3 style="list-style-type: none">Common Illnesses</h3>
+                        </li>
+                        <li>Fever</li>
+                        <li>Cough, sore throat or laryngitis</li>
+                        <li>Diarrhoea / Vomiting</li>
+                        <li>Flu / Cold</li>
+                        <li>Sinusitis</li>
+                        <li>Rash and skin conditions</li>
+                        <li>Cold sores</li>
+                        <li>Headache</li>
+                        <li>Giddiness / Dizziness</li>
+                        <li>Red eye</li>
+                    </ul>
+
+                    <ul class="right-list-item">
+                        <li class="ls-h3">
+                            <h3>Chronic Condition</h3>
+                        </li>
+                        <li>Diabetes</li>
+                        <li>Hypertension</li>
+                        <li>Hyperlipidemia</li>
+                        <li>Migraine</li>
+                        <li>Gout</li>
+                        <li>Dysmenorrhea</li>
+                        <li>Chronic Back Pain</li>
+                        <li>Other secondary diseases
+                            which may arise from the
+                            chronic disease conditions
+                            mentioned the above (e.g.
+                            Ischemic Disease, Peripheral
+                            Artery Disease etc.)
+                        </li>
+                    </ul>
+                </div>
+
+                <p>For conditions that are not listed above, the doctor will assess
+                    your history, current symptoms and any other available
+                    documents to determine if your condition is suitable for a video
+                    consultation.</p>
+
+            </div>
+
+            <div class="suitable-con-right">
+            </div>
+        </div>
+    </section>
+
+
+
+<!--    Footer-->
+    <div th:replace="/footer::my-footer"></div>
+
+
+
+</body>
+</html>

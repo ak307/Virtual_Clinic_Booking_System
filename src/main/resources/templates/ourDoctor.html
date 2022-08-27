@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" href="/css/ourDoctors.css">-->
+    <link rel="stylesheet" href="/css/userTopNavBar.css">
+    <link rel="stylesheet" href="/css/ourDoctors.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <title>Our Doctors</title>
+</head>
+<body>
+
+    <div th:replace="/userTopNavBar::replace"></div>
+
+<!--    Hero-->
+<!--    <section>-->
+<!--        <div class="hero-container">-->
+<!--            <img src="/imgs/doc_img.webp" alt="doctor img">-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+    <section class="our-doc-image">
+        <div class="Hero-container">
+
+        </div>
+    </section>
+
+
+
+
+<!--    Doctors-->
+    <section class="doctors-section">
+        <div class="doctors-container">
+            <h1 class="doctor-h1">CONSULT OUR QUALIFIED PANEL OF DOCTORS</h1>
+            <ul class="doctors-list">
+                <li>
+                    <div class="doc-img">
+                        <img src="/imgs/Doc1.jpeg" alt="Person">
+                        <h2> Dr. Tan Choon Yean</h2>
+                    </div>
+
+
+                    <blockquote>
+                        <h3>Professional profile:</h3>
+                        Dr.Tan graduated with a medical degree from University of Malaya in 2013. Since then, she has completed rotations across various clinical postings, including Internal Medicine, General Surgery, Paediatrics, Obstetrics and Gynecology, Orthopedics as well as Emergency Medicine.
+
+                        <h3>Qualifications:</h3>
+                        MBBS, University of Malaya; GDFM, National University of Singapore
+
+                        <h3>Language:</h3>
+                        English, Mandarin, Malay, Cantonese
+
+                        <h3>Location:</h3>
+                        Singapore
+                    </blockquote>
+                </li>
+
+                <li>
+                    <div class="doc-img">
+                        <img src="/imgs/Doc2.png" alt="Person">
+                        <h2> Dr.Chen Lin</h2>
+                    </div>
+                    <blockquote>
+                        <h3>Professional profile:</h3>
+                        Dr Chen graduated with an MBBS from the National University of Singapore. He has 4 years of experience in professional practice in Singapore hospitals, in disciplines including Obstetrics and Gynaecology, Emergency Medicine, Internal Medicine and General Surgery. Dr Chen has a special interest in Women’s Health and was a post-graduate trainee in Obstetrics and Gynaecology before joining the private practice. His other clinical interests include Sexual Health, Preventive Health and Aesthetic Medicine. Language: English, Mandarin
+
+                        <h3>Qualifications:</h3>
+                        MBBS, National University of Singapore
+
+                        <h3>Language:</h3>
+                        English, Mandarin
+
+                        <h3>Location:</h3>
+                        Singapore
+                    </blockquote>
+                </li>
+
+                <li>
+                    <div class="doc-img">
+                        <img src="/imgs/Doc3.jpeg" alt="Person">
+                        <h2>Dr.Michael Chee</h2>
+                    </div>
+
+                    <blockquote>
+                        <h3>Professional profile:</h3>
+                        Dr Chee graduated with an MBBS from the National University of Singapore. He has 6 years of experience in major public hospital disciplines including Orthopaedics, Hand & Reconstructive Microsurgery, Accident & Emergency, General Surgery, Paediatric Surgery, Internal Medicine as well as step down care at the community hospital level. His areas of interest include sports medicine and community medicine.
+
+                        <h3>Qualifications:</h3>
+                        MBBS, NUS DWD CAW
+
+
+                        <h3>Language:</h3>
+                        English, Mandarin
+
+                        <h3>Location:</h3>
+                        Singapore
+                    </blockquote>
+                </li>
+
+
+            </ul>
+        </div>
+    </section>
+
+
+    <div th:replace="/footer::my-footer"></div>
+
+
+
+
+
+</body>
+</html>
